@@ -1,0 +1,9 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="publico" homePage="sv1#page1" layout:style="BootstrapStyle">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="760" gr:y="185" id="sv1#miu1" action="true" moduleId="mov1#opm1">
+      <KOLink id="sv1#miu1#kln2" name="KOFlow2" to="sv1#page2#mssu2">
+        <LinkParameter id="sv1#miu1#kln2#par4" name="error parametros_Shown Messages" source="mov1#opm1#kocu1#ocp1" target="sv1#page2#mssu2.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>
