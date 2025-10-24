@@ -1,6 +1,64 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="255" gr:y="290" id="sv1#page3" name="registro" linkOrder="sv1#page3#ln4">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="205" gr:y="280" id="sv1#page3" name="registro">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="5" gr:y="105" id="sv1#page3#mssu3" name="error"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu2" name="registro" entity="User" linkOrder="sv1#page3#enu2#ln8">
+      <Field id="sv1#page3#enu2#fld3" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv1#page3#enu2#fld4" name="password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv1#page3#enu2#fld5" name="email" type="string" modifiable="true" attribute="email"/>
+      <SelectionField id="sv1#page3#enu2#sfld1" name="defaultGroup" type="string" role="User2DefaultGroup"/>
+      <Link id="sv1#page3#enu2#ln8" name="Registro" to="sv1#miu3" type="normal" validate="true">
+        <LinkParameter id="sv1#page3#enu2#ln8#par13" name="email_email" source="sv1#page3#enu2#fld5" target="sv1#miu3.mov1#opm3#icu3#icp5"/>
+        <LinkParameter id="sv1#page3#enu2#ln8#par14" name="defaultGroup_grupoDefecto" source="sv1#page3#enu2#sfld1" target="sv1#miu3.mov1#opm3#icu3#icp6"/>
+        <LinkParameter id="sv1#page3#enu2#ln8#par15" name="password_password" source="sv1#page3#enu2#fld4" target="sv1#miu3.mov1#opm3#icu3#icp4"/>
+        <LinkParameter id="sv1#page3#enu2#ln8#par16" name="userName_username" source="sv1#page3#enu2#fld3" target="sv1#miu3.mov1#opm3#icu3#icp3"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="145" gr:y="0" id="sv1#page3#seu1" name="grupo" entity="Group">
+      <Link id="sv1#page3#seu1#ln7" name="Flow7" to="sv1#page3#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#seu1#ln7#par17" name="groupName_defaultGroup [label]" source="groupNameArray" target="sv1#page3#enu2#sfld1_label"/>
+        <LinkParameter id="sv1#page3#seu1#ln7#par18" name="id_defaultGroup [output]" source="groupOIDArray" target="sv1#page3#enu2#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#mssu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#enu2">
+          <layout:Field field="sv1#page3#enu2#fld3"/>
+          <layout:Field field="sv1#page3#enu2#fld4"/>
+          <layout:Field field="sv1#page3#enu2#fld5"/>
+          <layout:Field field="sv1#page3#enu2#sfld1"/>
+          <layout:Link link="sv1#page3#enu2#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>
@@ -16,5 +74,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#page3#ln4" name="Registro" to="sv1#page2" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

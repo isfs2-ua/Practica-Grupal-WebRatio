@@ -1,101 +1,124 @@
-[24 oct 2025 01:45:25] Building database metadata model
-[24 oct 2025 01:45:25] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@7fbdc7db, includeTables=true, username=postgres, outputLogPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:postgresql://localhost:5432/databaseGrupal, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=64576}
-[24 oct 2025 01:45:25] URL: jdbc:postgresql://localhost:5432/databaseGrupal
-[24 oct 2025 01:45:25] Product name: PostgreSQL
-[24 oct 2025 01:45:25] Product version: 9.6.15
-[24 oct 2025 01:45:25] Driver name: PostgreSQL Native Driver
-[24 oct 2025 01:45:25] Driver version: PostgreSQL 9.3 JDBC3g (build 1103)
-[24 oct 2025 01:45:25] Driver major version: 9
-[24 oct 2025 01:45:25] Driver minor version: 3
-[24 oct 2025 01:45:25] Identifier quote string: 3
-[24 oct 2025 01:45:25] Retrieving schemas
-[24 oct 2025 01:45:25]   Found schema: information_schema
-[24 oct 2025 01:45:25]   Found schema: pg_catalog
-[24 oct 2025 01:45:25]   Found schema: public
-[24 oct 2025 01:45:25] Retrieving sequences
-[24 oct 2025 01:45:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
-[24 oct 2025 01:45:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
-[24 oct 2025 01:45:25] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
-[24 oct 2025 01:45:25]   Found 'public.categoria' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.group' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.group_module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.pago' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.plan' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.plan_suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.servicio' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.user' [type = TABLE]
-[24 oct 2025 01:45:25]   Found 'public.user_group' [type = TABLE]
-[24 oct 2025 01:45:25] Retrieving columns for 'public.categoria' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.categoria' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.group' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: module_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.group' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.group_module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: module_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.group_module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: group_id
-[24 oct 2025 01:45:25]   Found primary key column: module_id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.module' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.pago' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: paymentdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.pago' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.plan' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: type [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: price [type = numeric][SQL/XOPEN type = 2][size = 19][dec. digits = 2]
-[24 oct 2025 01:45:25]   Found column: nombre [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: servicio_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.plan' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.plan_suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: plan_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: suscrito_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.plan_suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: plan_id
-[24 oct 2025 01:45:25]   Found primary key column: suscrito_id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.servicio' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: categoria_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.servicio' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: renovationdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: active [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: user_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: pago_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.suscrito' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.user' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: email [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.user' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: id
-[24 oct 2025 01:45:25] Retrieving columns for 'public.user_group' [type = TABLE]
-[24 oct 2025 01:45:25]   Found column: user_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[24 oct 2025 01:45:25] Retrieving primary keys for 'public.user_group' [type = TABLE]
-[24 oct 2025 01:45:25]   Found primary key column: user_id
-[24 oct 2025 01:45:25]   Found primary key column: group_id
-[24 oct 2025 01:45:25] Database metadata retrieved (102 ms)
-[24 oct 2025 01:45:25] Database connection closed
+[24 oct 2025 01:58:20] Building database metadata model
+[24 oct 2025 01:58:20] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@48c3c62, includeTables=true, username=postgres, outputLogPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:postgresql://localhost:5432/databaseGrupal, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=true, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=54832}
+[24 oct 2025 01:58:20] URL: jdbc:postgresql://localhost:5432/databaseGrupal
+[24 oct 2025 01:58:20] Product name: PostgreSQL
+[24 oct 2025 01:58:20] Product version: 9.6.15
+[24 oct 2025 01:58:20] Driver name: PostgreSQL Native Driver
+[24 oct 2025 01:58:20] Driver version: PostgreSQL 9.3 JDBC3g (build 1103)
+[24 oct 2025 01:58:20] Driver major version: 9
+[24 oct 2025 01:58:20] Driver minor version: 3
+[24 oct 2025 01:58:20] Identifier quote string: 3
+[24 oct 2025 01:58:20] Retrieving schemas
+[24 oct 2025 01:58:20]   Found schema: information_schema
+[24 oct 2025 01:58:20]   Found schema: pg_catalog
+[24 oct 2025 01:58:20]   Found schema: public
+[24 oct 2025 01:58:20] Retrieving sequences
+[24 oct 2025 01:58:20] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
+[24 oct 2025 01:58:20] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
+[24 oct 2025 01:58:20] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
+[24 oct 2025 01:58:20]   Found 'public.categoria' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.group_module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.pago' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.plan' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.plan_suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.servicio' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.user' [type = TABLE]
+[24 oct 2025 01:58:20]   Found 'public.user_group' [type = TABLE]
+[24 oct 2025 01:58:20] Retrieving columns for 'public.categoria' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.categoria' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: module_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.group_module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: module_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.group_module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: group_id
+[24 oct 2025 01:58:20]   Found primary key column: module_id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.pago' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: paymentdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.pago' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.plan' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: type [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: price [type = numeric][SQL/XOPEN type = 2][size = 19][dec. digits = 2]
+[24 oct 2025 01:58:20]   Found column: nombre [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: servicio_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.plan' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.plan_suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: plan_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: suscrito_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.plan_suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: plan_id
+[24 oct 2025 01:58:20]   Found primary key column: suscrito_id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.servicio' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: categoria_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.servicio' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: renovationdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: active [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: user_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: pago_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.user' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: email [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.user' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: id
+[24 oct 2025 01:58:20] Retrieving columns for 'public.user_group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found column: user_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20]   Found column: group_id [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[24 oct 2025 01:58:20] Retrieving primary keys for 'public.user_group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found primary key column: user_id
+[24 oct 2025 01:58:20]   Found primary key column: group_id
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.categoria' [type = TABLE]
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column module_id references module(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.group_module' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column group_id references group(id)
+[24 oct 2025 01:58:20]   Found foreign key: column module_id references module(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.module' [type = TABLE]
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.pago' [type = TABLE]
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.plan' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column servicio_id references servicio(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.plan_suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column plan_id references plan(id)
+[24 oct 2025 01:58:20]   Found foreign key: column suscrito_id references suscrito(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.servicio' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column categoria_id references categoria(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.suscrito' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column pago_id references pago(id)
+[24 oct 2025 01:58:20]   Found foreign key: column user_id references user(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.user' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column group_id references group(id)
+[24 oct 2025 01:58:20] Retrieving foreign keys for 'public.user_group' [type = TABLE]
+[24 oct 2025 01:58:20]   Found foreign key: column group_id references group(id)
+[24 oct 2025 01:58:20]   Found foreign key: column user_id references user(id)
+[24 oct 2025 01:58:20] Database metadata retrieved (256 ms)
+[24 oct 2025 01:58:20] Database connection closed

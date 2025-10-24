@@ -1,5 +1,26 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="105" id="mov1#opm3" name="registro">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm3#icu3" name="Input Collector" gr:x="30" gr:y="60"/>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="-15" gr:y="135">
+      <OKLink id="mov1#opm3#icu3#oln4" name="OKFlow4" to="mov1#opm3#cru1">
+        <LinkParameter id="mov1#opm3#icu3#oln4#par8" name="email_email" source="mov1#opm3#icu3#icp5" target="mov1#opm3#cru1.email"/>
+        <LinkParameter id="mov1#opm3#icu3#oln4#par9" name="password_password" source="mov1#opm3#icu3#icp4" target="mov1#opm3#cru1.password"/>
+        <LinkParameter id="mov1#opm3#icu3#oln4#par10" name="username_userName" source="mov1#opm3#icu3#icp3" target="mov1#opm3#cru1.userName"/>
+        <LinkParameter id="mov1#opm3#icu3#oln4#par11" name="grupoDefecto_Group.id(defaultGroup)" source="mov1#opm3#icu3#icp6" target="mov1#opm3#cru1.User2DefaultGroup.groupOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp3" name="username"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp4" name="password"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp5" name="email"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp6" name="grupoDefecto"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="320" gr:y="150" id="mov1#opm3#cru1" name="registro" entity="User">
+      <OKLink id="mov1#opm3#cru1#oln5" name="OKFlow5" to="mov1#opm3#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#cru1#kln3" name="KOFlow3" to="mov1#opm3#kocu2">
+        <LinkParameter id="mov1#opm3#cru1#kln3#par7" name="Error al registrar el usuario_error  parametros" sourceValue="Error al registrar el usuario" target="mov1#opm3#kocu2#ocp2"/>
+      </KOLink>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="520" gr:y="205" id="mov1#opm3#kocu2" name="KO Port2">
+      <OutputCollectorParameter id="mov1#opm3#kocu2#ocp2" name="error  parametros"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="520" gr:y="105" id="mov1#opm3#okcu2" name="OK Port2"/>
   </OperationUnits>
 </OperationModule>
