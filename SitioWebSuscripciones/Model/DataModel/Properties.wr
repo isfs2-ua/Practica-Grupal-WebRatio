@@ -89,26 +89,25 @@
       <db:JoinColumn attribute="ent6#att6" name="id"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel5" name="Plan_Suscrito" sourceEntity="ent3" targetEntity="ent6" db:database="db1" db:table="plan_suscrito">
+  <Relationship id="rel5" name="Plan_Suscrito" sourceEntity="ent3" targetEntity="ent6" db:database="db1" db:table="suscrito">
     <RelationshipRole1 id="rel5#role9" name="PlanToSuscrito" maxCard="N">
       <db:JoinColumn attribute="ent3#att5" name="plan_id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="SuscritoToPlan" maxCard="N">
+    <RelationshipRole2 id="rel5#role10" name="SuscritoToPlan" maxCard="1">
       <db:JoinColumn attribute="ent6#att6" name="suscrito_id"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="115" gr:y="370" id="ent7" name="Pago" duration="persistent" attributeOrder="ent7#att16 ent7#att17" db:database="db1" db:table="pago">
-    <Attribute id="ent7#att16" key="true" name="id" type="integer" db:column="id"/>
+    <Attribute id="ent7#att16" key="true" name="id_pago" type="integer" db:column="id_pago"/>
     <Attribute id="ent7#att17" name="paymentDate" type="date" db:column="paymentdate"/>
   </Entity>
-  <Relationship id="rel7" name="Suscrito_Pago" sourceEntity="ent6" targetEntity="ent7" db:database="db1" db:table="suscrito">
-    <RelationshipRole1 id="rel7#role13" name="SuscritoToPago" maxCard="1">
+  <Relationship id="rel7" name="Suscrito_Pago" sourceEntity="ent6" targetEntity="ent7" db:database="db1" db:table="pago">
+    <RelationshipRole1 id="rel7#role13" name="SuscritoToPago" maxCard="N" cascadeDelete="false">
       <db:JoinColumn attribute="ent6#att6" name="id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel7#role14" name="PagoToSuscrito" maxCard="N">
+    <RelationshipRole2 id="rel7#role14" name="PagoToSuscrito" maxCard="1">
       <db:JoinColumn attribute="ent7#att16" name="pago_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="DatabaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="aXdlYg==" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" cryptedPassword="true" username="postgres" password="aXdlYg==" schema="public"/>
 </DataModel>

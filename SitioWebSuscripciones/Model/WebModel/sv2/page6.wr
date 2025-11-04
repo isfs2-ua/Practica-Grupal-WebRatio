@@ -1,0 +1,113 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="30" id="sv2#page6" name="Suscripciones" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv2#page6#gtu3" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page6#gtu3#ln11" name="Flow11" to="sv2#page6#pwu2" type="transport" validate="true">
+        <LinkParameter id="sv2#page6#gtu3#ln11#par30" name="UserCtxParam.id_usuario" source="sv2#page6#gtu3.UserCtxParam" target="sv2#page6#pwu2#su2#acond4"/>
+      </Link>
+      <Link id="sv2#page6#gtu3#ln18" name="Flow18" to="sv2#cru2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit gr:x="255" gr:y="0" id="sv2#page6#pwu2" name="Suscripciones" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att15 ent6#att14 rel5#role10.ent3#att12 rel5#role10.rel2#role4.rel1#role2.ent2#att4" linkOrder="sv2#page6#pwu2#ln9">
+      <Selector id="sv2#page6#pwu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page6#pwu2#su2#acond4" name="usuario" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.userOID"/>
+      </Selector>
+      <Link id="sv2#page6#pwu2#ln9" name="Borrar" to="sv2#dlu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page6#pwu2#ln9#par22" name="id_KeyCondition2 [id]" source="data[].ent6#att6" target="sv2#dlu1#su3#kcond2.ent6#att6"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="65" gr:y="120" id="sv2#page6#enu3" name="Crear suscripcion" linkOrder="sv2#page6#enu3#ln10" entity="ent6" customDescriptor="false" fieldOrder="sv2#page6#enu3#fld9 sv2#page6#enu3#fld10 sv2#page6#enu3#sfld5">
+      <Link id="sv2#page6#enu3#ln10" name="Crear" to="sv2#cru2" type="normal" validate="true" gr:bendpoints="72,228,132,-147">
+        <LinkParameter id="sv2#page6#enu3#ln10#par23" name="active_active" source="sv2#page6#enu3#fld10" target="sv2#cru2.ent6#att15"/>
+        <LinkParameter id="sv2#page6#enu3#ln10#par27" name="renovationDate_renovationDate" source="sv2#page6#enu3#fld9" target="sv2#cru2.ent6#att14"/>
+        <LinkParameter id="sv2#page6#enu3#ln10#par31" name="Suscrito Object_Suscrito Object" source="entityBean" target="sv2#cru2.entityBeans"/>
+        <LinkParameter id="sv2#page6#enu3#ln10#par24" name="Key [id]_id" source="key.ent6#att6" target="sv2#cru2.ent6#att6"/>
+        <LinkParameter id="sv2#page6#enu3#ln10#par25" name="plan_Plan.id(SuscritoToPlan)" source="sv2#page6#enu3#sfld5" target="sv2#cru2.rel5#role10.ent3#att5"/>
+        <LinkParameter id="sv2#page6#enu3#ln10#par29" name="plan_Plan.id(SuscritoToPlan)" source="sv2#page6#enu3#sfld5" target="sv2#cru2.rel5#role10.ent3#att5"/>
+      </Link>
+      <Field id="sv2#page6#enu3#fld9" name="renovationDate" type="date" modifiable="true" attribute="ent6#att14" preloaded="true"/>
+      <Field id="sv2#page6#enu3#fld10" name="active" type="boolean" modifiable="true" attribute="ent6#att15" preloaded="true"/>
+      <SelectionField id="sv2#page6#enu3#sfld5" name="plan" type="integer" splitOutput="true"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="330" gr:y="360" id="sv2#page6#mssu5" name="error"/>
+    <SelectorUnit gr:x="230" gr:y="120" id="sv2#page6#seu6" name="Selector6" entity="ent3" distinct="false">
+      <Link id="sv2#page6#seu6#ln16" name="Flow16" to="sv2#page6#enu3" type="transport" validate="true">
+        <LinkParameter id="sv2#page6#seu6#ln16#par26" name="nombre_plan [label]" source="ent3#att12Array" target="sv2#page6#enu3#sfld5_label"/>
+        <LinkParameter id="sv2#page6#seu6#ln16#par28" name="id_plan [output]" source="ent3#att5Array" target="sv2#page6#enu3#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page6#pwu2">
+          <layout:Link link="sv2#page6#pwu2#ln9"/>
+          <layout:Attribute attribute="ent6#att15"/>
+          <layout:Attribute attribute="ent6#att14"/>
+          <layout:Attribute attribute="rel5#role10.ent3#att12"/>
+          <layout:Attribute attribute="rel5#role10.rel2#role4.rel1#role2.ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page6#enu3">
+          <layout:Link link="sv2#page6#enu3#ln10"/>
+          <layout:Field field="sv2#page6#enu3#fld9"/>
+          <layout:Field field="sv2#page6#enu3#fld10"/>
+          <layout:Field field="sv2#page6#enu3#sfld5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page6#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBError statementIndex="0">
+  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: no existe la relaci&#243;n &#171;public.suscrito&#187;</ErrorMessage>
+  <Comment> Plan_Suscrito [rel5]</Comment>
+  <Statement> alter table "public"."suscrito"   drop constraint "fk_suscrito_plan"</Statement>
+  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: no existe la relaci&#243;n &#171;public.suscrito&#187;</ErrorMessage>
+  <StackTrace>com.webratio.commons.db.DBException: org.postgresql.util.PSQLException: ERROR: no existe la relaci&#243;n &#171;public.suscrito&#187;
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:546)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+Caused by: org.postgresql.util.PSQLException: ERROR: no existe la relaci&#243;n &#171;public.suscrito&#187;
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:562)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:406)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:398)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	... 2 more
+</StackTrace></DBError>

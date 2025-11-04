@@ -62,9 +62,9 @@ create table "public"."suscrito" (
 
 -- Pago [ent7]
 create table "public"."pago" (
-   "id"  int4  not null,
+   "id_pago"  int4  not null,
    "paymentdate"  date,
-  primary key ("id")
+  primary key ("id_pago")
 );
 
 
@@ -114,17 +114,12 @@ alter table "public"."suscrito"   add constraint fk_suscrito_user foreign key ("
 
 
 -- Plan_Suscrito [rel5]
-create table "public"."plan_suscrito" (
-   "plan_id"  int4 not null,
-   "suscrito_id"  int4 not null,
-  primary key ("plan_id", "suscrito_id")
-);
-alter table "public"."plan_suscrito"   add constraint fk_plan_suscrito_plan foreign key ("plan_id") references "public"."plan" ("id");
-alter table "public"."plan_suscrito"   add constraint fk_plan_suscrito_suscrito foreign key ("suscrito_id") references "public"."suscrito" ("id");
+alter table "public"."suscrito"  add column  "plan_id"  int4;
+alter table "public"."suscrito"   add constraint fk_suscrito_plan foreign key ("plan_id") references "public"."plan" ("id");
 
 
 -- Suscrito_Pago [rel7]
-alter table "public"."suscrito"  add column  "pago_id"  int4;
-alter table "public"."suscrito"   add constraint fk_suscrito_pago foreign key ("pago_id") references "public"."pago" ("id");
+alter table "public"."pago"  add column  "id"  int4;
+alter table "public"."pago"   add constraint fk_pago_suscrito foreign key ("id") references "public"."suscrito" ("id");
 
 

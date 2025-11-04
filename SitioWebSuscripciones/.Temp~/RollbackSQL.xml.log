@@ -1,0 +1,36 @@
+[29 oct 2025 23:25:26] DEBUG Executing SQL script
+[29 oct 2025 23:25:26] INFO ================================================================================
+[29 oct 2025 23:25:26] INFO onError= 'stop'
+[29 oct 2025 23:25:26] INFO autoCommit= 'false'
+[29 oct 2025 23:25:26] INFO username= 'postgres'
+[29 oct 2025 23:25:26] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\RollbackSQL.xml'
+[29 oct 2025 23:25:26] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\RollbackSQL.xml.log'
+[29 oct 2025 23:25:26] INFO encoding= ''
+[29 oct 2025 23:25:26] INFO driverClass= 'org.postgresql.Driver'
+[29 oct 2025 23:25:26] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\RollbackSQL.sql'
+[29 oct 2025 23:25:26] INFO eventSocketPort= '53589'
+[29 oct 2025 23:25:26] INFO statementSeparator= ';'
+[29 oct 2025 23:25:26] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[29 oct 2025 23:25:26] INFO password= 'iweb'
+[29 oct 2025 23:25:26] INFO url= 'jdbc:postgresql://localhost:5432/databaseGrupal'
+[29 oct 2025 23:25:26] INFO ================================================================================
+[29 oct 2025 23:25:26] INFO Connecting to the Database...
+[29 oct 2025 23:25:26] INFO Database connection estabilished
+[29 oct 2025 23:25:26] INFO transaction isolation: 2
+[29 oct 2025 23:25:26] DEBUG ================================================================================
+[29 oct 2025 23:25:26] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\RollbackSQL.sql
+[29 oct 2025 23:25:26] DEBUG Executing statement:  alter table "public"."suscrito"   drop constraint "fk_suscrito_plan"
+[29 oct 2025 23:25:26] ERROR Could not execute statement:  alter table "public"."suscrito"   drop constraint "fk_suscrito_plan"
+org.postgresql.util.PSQLException: ERROR: no existe la relación «public.suscrito»
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:562)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:406)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:398)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+[29 oct 2025 23:25:26] ERROR SQL SCRIPT EXECUTION FAILED
+[29 oct 2025 23:25:26] INFO Database connection closed
+[29 oct 2025 23:25:26] DEBUG Total time: 176 milliseconds

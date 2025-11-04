@@ -12,13 +12,10 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="module_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="module_id" foreignColumnName="id" name="fk_group_module" foreignTableName="module" foreignSchemaName="public"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="group_module" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_id" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="module_id" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_id" foreignColumnName="id" name="fk_group_module_group" foreignTableName="group" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="module_id" foreignColumnName="id" name="fk_group_module_module" foreignTableName="module" foreignSchemaName="public"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="module" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
@@ -26,8 +23,9 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="modulename" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="pago" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id_pago" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="date" size="13" decimalDigits="0" name="paymentdate" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="plan" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
@@ -35,28 +33,18 @@
     <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="numeric" size="19" decimalDigits="2" name="price" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="nombre" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="servicio_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="servicio_id" foreignColumnName="id" name="fk_plan_servicio" foreignTableName="servicio" foreignSchemaName="public"/>
-  </Table>
-  <Table schema="public" ignoreIndexes="false" name="plan_suscrito" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="plan_id" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="suscrito_id" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="plan_id" foreignColumnName="id" name="fk_plan_suscrito_plan" foreignTableName="plan" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="suscrito_id" foreignColumnName="id" name="fk_plan_suscrito_suscrito" foreignTableName="suscrito" foreignSchemaName="public"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="servicio" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="name" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="categoria_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="categoria_id" foreignColumnName="id" name="fk_servicio_categoria" foreignTableName="categoria" foreignSchemaName="public"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="suscrito" type="TABLE" refreshed="true">
     <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="date" size="13" decimalDigits="0" name="renovationdate" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="bool" size="1" decimalDigits="0" name="active" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_id" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="pago_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="pago_id" foreignColumnName="id" name="fk_suscrito_pago" foreignTableName="pago" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="user_id" foreignColumnName="id" name="fk_suscrito_user" foreignTableName="user" foreignSchemaName="public"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="plan_id" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="user" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
@@ -64,12 +52,9 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="password" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="email" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="group_id" foreignColumnName="id" name="fk_user_group" foreignTableName="group" foreignSchemaName="public"/>
   </Table>
   <Table schema="public" ignoreIndexes="false" name="user_group" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_id" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_id" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_id" foreignColumnName="id" name="fk_user_group_group" foreignTableName="group" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="user_id" foreignColumnName="id" name="fk_user_group_user" foreignTableName="user" foreignSchemaName="public"/>
   </Table>
 </DBMetaData>
