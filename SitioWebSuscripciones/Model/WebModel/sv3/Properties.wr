@@ -1,3 +1,12 @@
-<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="administracion" layout:style="BootstrapStyle">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="administracion" layout:style="BootstrapStyle" homePage="sv3#page5" landmarks="sv3#page11 sv3#page10 sv3#page9 sv3#page5">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="485" gr:y="140" id="sv3#miu4" action="true" moduleId="mov1#opm2"/>
+    <ModuleInstanceUnit gr:x="705" gr:y="225" id="sv3#miu5" action="true" moduleId="mov1#opm4"/>
+    <ModuleInstanceUnit gr:x="25" gr:y="485" id="sv3#miu6" action="true" moduleId="mov1#opm6"/>
+    <ModuleInstanceUnit gr:x="670" gr:y="545" id="sv3#miu7" action="true" moduleId="mov1#opm5"/>
+    <ModuleInstanceUnit gr:x="315" gr:y="440" id="sv3#miu8" action="true" moduleId="mov1#opm9"/>
+    <ModuleInstanceUnit gr:x="975" gr:y="520" id="sv3#miu9" action="true" moduleId="mov1#opm8"/>
+    <ModuleInstanceUnit gr:x="1105" gr:y="90" id="sv3#miu10" action="true" moduleId="mov1#opm7"/>
+    <ModuleInstanceUnit gr:x="480" gr:y="320" id="sv3#miu11" action="true" moduleId="mov1#opm10"/>
+  </OperationUnits>
 </SiteView>

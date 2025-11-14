@@ -76,38 +76,39 @@
       <db:JoinColumn attribute="ent3#att5" name="id"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="385" gr:y="400" id="ent6" name="Suscrito" duration="persistent" attributeOrder="ent6#att6 ent6#att14 ent6#att15" db:database="db1" db:table="suscrito">
-    <Attribute id="ent6#att14" name="renovationDate" type="date" db:column="renovationdate"/>
-    <Attribute id="ent6#att15" name="active" type="boolean" db:column="active"/>
-    <Attribute id="ent6#att6" name="id" type="integer" key="true" db:column="id"/>
-  </Entity>
-  <Relationship id="rel4" name="User_Suscrito" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="suscrito">
-    <RelationshipRole1 id="rel4#role7" name="UserToSuscrito" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_id"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="SuscritoToUser" maxCard="1">
-      <db:JoinColumn attribute="ent6#att6" name="id"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel5" name="Plan_Suscrito" sourceEntity="ent3" targetEntity="ent6" db:database="db1" db:table="suscrito">
-    <RelationshipRole1 id="rel5#role9" name="PlanToSuscrito" maxCard="N">
-      <db:JoinColumn attribute="ent3#att5" name="plan_id"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="SuscritoToPlan" maxCard="1">
-      <db:JoinColumn attribute="ent6#att6" name="suscrito_id"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="115" gr:y="370" id="ent7" name="Pago" duration="persistent" attributeOrder="ent7#att16 ent7#att17" db:database="db1" db:table="pago">
     <Attribute id="ent7#att16" key="true" name="id_pago" type="integer" db:column="id_pago"/>
     <Attribute id="ent7#att17" name="paymentDate" type="date" db:column="paymentdate"/>
   </Entity>
-  <Relationship id="rel7" name="Suscrito_Pago" sourceEntity="ent6" targetEntity="ent7" db:database="db1" db:table="pago">
-    <RelationshipRole1 id="rel7#role13" name="SuscritoToPago" maxCard="N" cascadeDelete="false">
-      <db:JoinColumn attribute="ent6#att6" name="id"/>
+  <Entity gr:x="400" gr:y="430" id="ent5" name="Suscripciones" duration="persistent" attributeOrder="ent5#att14 ent5#att15" db:database="db1" db:table="suscrito_2">
+    <Attribute id="ent5#att13" key="true" name="id" type="integer" db:column="id"/>
+    <Attribute id="ent5#att14" name="renovationDate" type="date" db:column="renovationdate"/>
+    <Attribute id="ent5#att15" name="active" type="boolean" db:column="active"/>
+  </Entity>
+  <Relationship id="rel4" name="Suscrito_Plan" sourceEntity="ent5" targetEntity="ent3" db:database="db1" db:table="suscrito_2">
+    <RelationshipRole1 id="rel4#role7" name="SuscritoToPlan" maxCard="1">
+      <db:JoinColumn attribute="ent5#att13" name="id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel7#role14" name="PagoToSuscrito" maxCard="1">
-      <db:JoinColumn attribute="ent7#att16" name="pago_id"/>
+    <RelationshipRole2 id="rel4#role8" name="PlanToSuscrito" maxCard="N">
+      <db:JoinColumn attribute="ent3#att5" name="plan_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" cryptedPassword="true" username="postgres" password="aXdlYg==" schema="public"/>
+  <Relationship id="rel5" name="Suscrito_User" sourceEntity="ent5" targetEntity="User" db:database="db1" db:table="suscrito_2">
+    <RelationshipRole1 id="rel5#role9" name="SuscritoToUser" maxCard="1">
+      <db:JoinColumn attribute="ent5#att13" name="id"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="UserToSuscrito" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_id"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Pago_Suscrito" sourceEntity="ent7" targetEntity="ent5" db:database="db1" db:table="pago">
+    <RelationshipRole1 id="rel3#role5" name="PagoToSuscrito" maxCard="1">
+      <db:JoinColumn attribute="ent7#att16" name="id_pago"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="SuscritoToPago" maxCard="N">
+      <db:JoinColumn attribute="ent5#att13" name="suscrito_2_id"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db1" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="aXdlYg==" schema="public">
+  </db:Database>
 </DataModel>

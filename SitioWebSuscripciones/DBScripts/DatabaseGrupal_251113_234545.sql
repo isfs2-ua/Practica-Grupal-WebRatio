@@ -51,7 +51,7 @@ create table "public"."plan" (
 );
 
 
--- Suscripciones [ent5]
+-- Suscrito [ent5]
 create table "public"."suscrito_2" (
    "id"  int4  not null,
    "renovationdate"  date,

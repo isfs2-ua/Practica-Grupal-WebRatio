@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="115" id="mov1#opm10" name="modificar plan">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="55" gr:y="205">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp20" name="id"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp21" name="nombre"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp22" name="tipo"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp23" name="precio"/>
+      <OKLink id="mov1#opm10#icu10#oln14" name="OKFlow14" to="mov1#opm10#mfu2">
+        <LinkParameter id="mov1#opm10#icu10#oln14#par72" name="id_KeyCondition5 [id]" source="mov1#opm10#icu10#icp20" target="mov1#opm10#mfu2#su7#kcond5.ent3#att5"/>
+        <LinkParameter id="mov1#opm10#icu10#oln14#par73" name="nombre_nombre" source="mov1#opm10#icu10#icp21" target="mov1#opm10#mfu2.ent3#att12"/>
+        <LinkParameter id="mov1#opm10#icu10#oln14#par74" name="precio_price" source="mov1#opm10#icu10#icp23" target="mov1#opm10#mfu2.ent3#att11"/>
+        <LinkParameter id="mov1#opm10#icu10#oln14#par75" name="tipo_type" source="mov1#opm10#icu10#icp22" target="mov1#opm10#mfu2.ent3#att10"/>
+        <LinkParameter id="mov1#opm10#icu10#oln14#par76" name="servicio_Servicio.id(PlanToServicio)" source="mov1#opm10#icu10#icp24" target="mov1#opm10#mfu2.rel2#role4.ent1#att1"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp24" name="servicio"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="350" gr:y="225" id="mov1#opm10#mfu2" name="Update2" entity="ent3">
+      <Selector id="mov1#opm10#mfu2#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#mfu2#su7#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#mfu2#oln13" name="OKFlow13" to="mov1#opm10#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm10#mfu2#kln11" name="KOFlow11" to="mov1#opm10#kocu4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="540" gr:y="175" id="mov1#opm10#okcu4" name="OK Port4"/>
+    <KOCollectorUnit gr:x="540" gr:y="270" id="mov1#opm10#kocu4" name="KO Port4"/>
+  </OperationUnits>
+</OperationModule>

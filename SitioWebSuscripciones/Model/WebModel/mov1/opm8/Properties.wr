@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="865" gr:y="275" id="mov1#opm8" name="borrar servicio">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu8" gr:x="65" gr:y="225">
+      <OKLink id="mov1#opm8#icu8#oln31" name="OKFlow31" to="mov1#opm8#dlu4">
+        <LinkParameter id="mov1#opm8#icu8#oln31#par55" name="id_KeyCondition11 [id]" source="mov1#opm8#icu8#icp19" target="mov1#opm8#dlu4#su13#kcond11.ent1#att1"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm8#icu8#icp19" name="id"/>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="370" gr:y="215" id="mov1#opm8#dlu4" name="Delete4" entity="ent1">
+      <Selector id="mov1#opm8#dlu4#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#dlu4#su13#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm8#dlu4#oln32" name="OKFlow32" to="mov1#opm8#okcu11" automaticCoupling="true"/>
+      <KOLink id="mov1#opm8#dlu4#kln24" name="KOFlow24" to="mov1#opm8#kocu10" automaticCoupling="true"/>
+    </DeleteUnit>
+    <OKCollectorUnit gr:x="545" gr:y="170" id="mov1#opm8#okcu11" name="OK Port11"/>
+    <KOCollectorUnit gr:x="545" gr:y="280" id="mov1#opm8#kocu10" name="KO Port10"/>
+  </OperationUnits>
+</OperationModule>

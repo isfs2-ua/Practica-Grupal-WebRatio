@@ -1,0 +1,39 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="265" id="mov1#opm5" name="crear o modificar servicio">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="25" gr:y="75" linkOrder="mov1#opm5#icu5#ln19 mov1#opm5#icu5#ln20">
+      <OKLink id="mov1#opm5#icu5#oln22" name="OKFlow22" to="mov1#opm5#inn4">
+        <LinkParameter id="mov1#opm5#icu5#oln22#par35" name="id_Input" source="mov1#opm5#icu5#icp9" target="mov1#opm5#inn4.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp9" name="id"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp10" name="name"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp11" name="categoria"/>
+      <Link id="mov1#opm5#icu5#ln19" name="Flow19" to="mov1#opm5#mfu4" type="transport" validate="true" gr:bendpoints="139,-81,-211,-1">
+        <LinkParameter id="mov1#opm5#icu5#ln19#par36" name="id_KeyCondition4 [id]" source="mov1#opm5#icu5#icp9" target="mov1#opm5#mfu4#su9#kcond7.ent1#att1"/>
+        <LinkParameter id="mov1#opm5#icu5#ln19#par37" name="name_name" source="mov1#opm5#icu5#icp10" target="mov1#opm5#mfu4.ent1#att2"/>
+        <LinkParameter id="mov1#opm5#icu5#ln19#par38" name="categoria_Categor&#237;a.id(ServicioToCategor&#237;a)" source="mov1#opm5#icu5#icp11" target="mov1#opm5#mfu4.rel1#role2.ent2#att3"/>
+      </Link>
+      <Link id="mov1#opm5#icu5#ln20" name="Flow20" to="mov1#opm5#cru9" type="transport" validate="true" gr:bendpoints="150,76,-200,1">
+        <LinkParameter id="mov1#opm5#icu5#ln20#par39" name="categoria_Categor&#237;a.id(ServicioToCategor&#237;a)" source="mov1#opm5#icu5#icp11" target="mov1#opm5#cru9.rel1#role2.ent2#att3"/>
+        <LinkParameter id="mov1#opm5#icu5#ln20#par40" name="id_id" source="mov1#opm5#icu5#icp9" target="mov1#opm5#cru9.ent1#att1"/>
+        <LinkParameter id="mov1#opm5#icu5#ln20#par41" name="name_name" source="mov1#opm5#icu5#icp10" target="mov1#opm5#cru9.ent1#att2"/>
+      </Link>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm5#kocu6" name="KO Port3" gr:x="650" gr:y="165"/>
+    <CreateUnit id="mov1#opm5#cru9" name="crear" gr:x="445" gr:y="165" entity="ent1">
+      <KOLink id="mov1#opm5#cru9#kln16" name="KOFlow9" to="mov1#opm5#kocu6" automaticCoupling="true"/>
+      <OKLink id="mov1#opm5#cru9#oln19" name="OKFlow12" to="mov1#opm5#okcu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov1#opm5#okcu7" name="OK Port3" gr:x="650" gr:y="10"/>
+    <ModifyUnit id="mov1#opm5#mfu4" name="modificar" gr:x="445" gr:y="0" entity="ent1">
+      <Selector id="mov1#opm5#mfu4#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm5#mfu4#su9#kcond7" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm5#mfu4#oln20" name="OKFlow11" to="mov1#opm5#okcu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#mfu4#kln17" name="KOFlow8" to="mov1#opm5#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <IsNotNullUnit id="mov1#opm5#inn4" name="si existe" gr:x="320" gr:y="100">
+      <OKLink id="mov1#opm5#inn4#oln21" name="OKFlow9" to="mov1#opm5#mfu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#inn4#kln18" name="KOFlow5" to="mov1#opm5#cru9" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

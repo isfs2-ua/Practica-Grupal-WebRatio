@@ -51,7 +51,7 @@ create table "public"."plan" (
 );
 
 
--- Suscripciones [ent5]
+-- Suscrito [ent5]
 create table "public"."suscrito_2" (
    "id"  int4  not null,
    "renovationdate"  date,
@@ -106,11 +106,6 @@ alter table "public"."servicio"   add constraint fk_servicio_categoria foreign k
 -- Servicio_Plan [rel2]
 alter table "public"."plan"  add column  "servicio_id"  int4;
 alter table "public"."plan"   add constraint fk_plan_servicio foreign key ("servicio_id") references "public"."servicio" ("id");
-
-
--- Pago_Suscrito [rel3]
-alter table "public"."pago"  add column  "suscrito_2_id"  int4;
-alter table "public"."pago"   add constraint fk_pago_suscrito_2 foreign key ("suscrito_2_id") references "public"."suscrito_2" ("id");
 
 
 -- Suscrito_Plan [rel4]

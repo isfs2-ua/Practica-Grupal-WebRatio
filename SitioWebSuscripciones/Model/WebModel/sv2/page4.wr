@@ -1,18 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="40" id="sv2#page4" name="Registrados">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="40" id="sv2#page4" name="Registrados">
   <ContentUnits>
-    <MultiMessageUnit gr:x="165" gr:y="5" id="sv2#page4#mssu4" name="Bienvenida">
+    <MultiMessageUnit gr:x="155" gr:y="5" id="sv2#page4#mssu4" name="Bienvenida">
       <Message xml:space="preserve">Esta es la vista de registrados</Message>
     </MultiMessageUnit>
     <GetUnit gr:x="20" gr:y="0" id="sv2#page4#gtu2" name="GetUser" contextParameters="UserCtxParam">
-      <Link id="sv2#page4#gtu2#ln5" name="Flow5" to="sv2#page4#pwu1" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#gtu2#ln5#par19" name="UserCtxParam.id_AttCondition2" source="sv2#page4#gtu2.UserCtxParam" target="sv2#page4#pwu1#su4#acond2"/>
+      <Link id="sv2#page4#gtu2#ln5" name="Flow5" to="sv2#page4#inu3" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu2#ln5#par22" name="UserCtxParam.id_AttCondition2" source="sv2#page4#gtu2.UserCtxParam" target="sv2#page4#inu3#su8#acond4"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit id="sv2#page4#pwu1" entity="ent6" displayAttributes="ent6#att15 rel7#role13.ent7#att17 ent6#att14 rel5#role10.rel2#role4.ent1#att2 rel5#role10.rel2#role4.rel1#role2.ent2#att4" sortable="true" checkable="false" useCountQuery="false" gr:x="0" gr:y="145" name="Mis suscripciones">
-      <Selector id="sv2#page4#pwu1#su4" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv2#page4#pwu1#su4#acond2" name="usuario" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.userOID"/>
+    <IndexUnit id="sv2#page4#inu3" entity="ent5" displayAttributes="ent5#att15 ent5#att14 rel4#role7.ent3#att12" gr:x="0" gr:y="135" name="Lista de suscripciones">
+      <Selector id="sv2#page4#inu3#su8" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page4#inu3#su8#acond4" attributes="rel5#role9.userOID" predicate="eq" booleanOperator="or" implied="false" name="AttCondition2"/>
       </Selector>
-    </PowerIndexUnit>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -33,12 +33,10 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#pwu1">
-          <layout:Attribute attribute="ent6#att15"/>
-          <layout:Attribute attribute="rel7#role13.ent7#att17"/>
-          <layout:Attribute attribute="ent6#att14"/>
-          <layout:Attribute attribute="rel5#role10.rel2#role4.ent1#att2"/>
-          <layout:Attribute attribute="rel5#role10.rel2#role4.rel1#role2.ent2#att4"/>
+        <layout:Unit unitId="sv2#page4#inu3">
+          <layout:Attribute attribute="ent5#att15"/>
+          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Attribute attribute="rel4#role7.ent3#att12"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

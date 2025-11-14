@@ -51,11 +51,11 @@ create table "public"."plan" (
 );
 
 
--- Suscripciones [ent5]
-create table "public"."suscrito_2" (
-   "id"  int4  not null,
+-- Suscrito [ent6]
+create table "public"."suscrito" (
    "renovationdate"  date,
    "active"  bool,
+   "id"  int4  not null,
   primary key ("id")
 );
 
@@ -108,18 +108,18 @@ alter table "public"."plan"  add column  "servicio_id"  int4;
 alter table "public"."plan"   add constraint fk_plan_servicio foreign key ("servicio_id") references "public"."servicio" ("id");
 
 
--- Pago_Suscrito [rel3]
-alter table "public"."pago"  add column  "suscrito_2_id"  int4;
-alter table "public"."pago"   add constraint fk_pago_suscrito_2 foreign key ("suscrito_2_id") references "public"."suscrito_2" ("id");
+-- User_Suscrito [rel4]
+alter table "public"."suscrito"  add column  "user_id"  int4;
+alter table "public"."suscrito"   add constraint fk_suscrito_user foreign key ("user_id") references "public"."user" ("id");
 
 
--- Suscrito_Plan [rel4]
-alter table "public"."suscrito_2"  add column  "plan_id"  int4;
-alter table "public"."suscrito_2"   add constraint fk_suscrito_2_plan foreign key ("plan_id") references "public"."plan" ("id");
+-- Plan_Suscrito [rel5]
+alter table "public"."suscrito"  add column  "plan_id"  int4;
+alter table "public"."suscrito"   add constraint fk_suscrito_plan foreign key ("plan_id") references "public"."plan" ("id");
 
 
--- Suscrito_User [rel5]
-alter table "public"."suscrito_2"  add column  "user_id"  int4;
-alter table "public"."suscrito_2"   add constraint fk_suscrito_2_user foreign key ("user_id") references "public"."user" ("id");
+-- Suscrito_Pago [rel7]
+alter table "public"."pago"  add column  "id"  int4;
+alter table "public"."pago"   add constraint fk_pago_suscrito foreign key ("id") references "public"."suscrito" ("id");
 
 

@@ -1,20 +1,11 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="registrados" layout:style="BootstrapStyle" homePage="sv2#page4" landmarks="sv2#page6">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="registrados" layout:style="BootstrapStyle" homePage="sv2#page4" landmarks="sv2#page7">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="375" gr:y="430" id="sv2#miu2" action="true" moduleId="mov1#opm2"/>
-    <CreateUnit gr:x="545" gr:y="560" id="sv2#cru2" name="Crear suscripcion" entity="ent6" gr:showAllParts="false">
-      <OKLink id="sv2#cru2#oln6" name="OKFlow6" to="sv2#page6" automaticCoupling="true"/>
-      <KOLink id="sv2#cru2#kln6" name="KOFlow6" to="sv2#page6#mssu5">
-        <LinkParameter id="sv2#cru2#kln6#par20" name="Error al crear la suscripcion_Shown Messages" sourceValue="Error al crear la suscripcion" target="sv2#page6#mssu5.shownMessages"/>
-      </KOLink>
-    </CreateUnit>
-    <DeleteUnit gr:x="1015" gr:y="225" id="sv2#dlu1" name="Borrar suscrpcion" entity="ent6">
+    <CreateUnit gr:x="575" gr:y="465" id="sv2#cru2" name="Crear suscripcion" gr:showAllParts="false" entity="ent5"/>
+    <DeleteUnit gr:x="995" gr:y="115" id="sv2#dlu1" name="Borrar suscrpcion" entity="ent5">
       <Selector id="sv2#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
-      <KOLink id="sv2#dlu1#kln7" name="KOFlow7" to="sv2#page6#mssu5">
-        <LinkParameter id="sv2#dlu1#kln7#par21" name="Error al borrar la suscrpcion_Shown Messages" sourceValue="Error al borrar la suscrpcion" target="sv2#page6#mssu5.shownMessages"/>
-      </KOLink>
-      <OKLink id="sv2#dlu1#oln8" name="OKFlow8" to="sv2#page6" automaticCoupling="true"/>
     </DeleteUnit>
   </OperationUnits>
 </SiteView>

@@ -1,0 +1,78 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="340" id="sv3#page10" name="Servicio" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="245" gr:y="0" id="sv3#page10#pwu7" name="Listado de servicios" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2" linkOrder="sv3#page10#pwu7#ln25">
+      <Link id="sv3#page10#pwu7#ln25" name="Borrar" to="sv3#miu9" type="normal" validate="true">
+        <LinkParameter id="sv3#page10#pwu7#ln25#par59" name="id_id" source="data[].ent1#att1" target="sv3#miu9.mov1#opm8#icu8#icp19"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="0" gr:y="10" id="sv3#page10#enu5" name="Formulario" entity="ent1" linkOrder="sv3#page10#enu5#ln26">
+      <Link id="sv3#page10#enu5#ln26" name="Crear servicio" to="sv3#miu7" type="normal" validate="true">
+        <LinkParameter id="sv3#page10#enu5#ln26#par60" name="name_name" source="sv3#page10#enu5#fld12" target="sv3#miu7.mov1#opm5#icu5#icp10"/>
+        <LinkParameter id="sv3#page10#enu5#ln26#par63" name="ServicioToCategor&#237;a_categoria" source="sv3#page10#enu5#sfld3" target="sv3#miu7.mov1#opm5#icu5#icp11"/>
+      </Link>
+      <Field id="sv3#page10#enu5#fld12" name="Nombre" type="string" modifiable="true" attribute="ent1#att2"/>
+      <SelectionField id="sv3#page10#enu5#sfld3" name="Categoria" type="string" role="rel1#role2"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="125" gr:y="10" id="sv3#page10#seu2" name="Selector2" entity="ent2">
+      <Link id="sv3#page10#seu2#ln27" name="Flow27" to="sv3#page10#enu5" type="transport" validate="true">
+        <LinkParameter id="sv3#page10#seu2#ln27#par61" name="name_ServicioToCategor&#237;a [label]" source="ent2#att4Array" target="sv3#page10#enu5#sfld3_label"/>
+        <LinkParameter id="sv3#page10#seu2#ln27#par62" name="id_ServicioToCategor&#237;a [output]" source="ent2#att3Array" target="sv3#page10#enu5#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page10#pwu7">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv3#page10#pwu7#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page10#enu5">
+          <layout:Link link="sv3#page10#enu5#ln26"/>
+          <layout:Field field="sv3#page10#enu5#fld12"/>
+          <layout:Field field="sv3#page10#enu5#sfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
