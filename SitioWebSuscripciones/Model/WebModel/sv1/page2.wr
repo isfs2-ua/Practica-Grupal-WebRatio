@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="525" gr:y="130" id="sv1#page2" name="login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="120" id="sv1#page2" name="login">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page2#enu1" name="form login" linkOrder="sv1#page2#enu1#ln3">
       <Link id="sv1#page2#enu1#ln3" name="OK" to="sv1#miu1" type="normal" validate="true">
@@ -12,7 +12,9 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="7">
         <layout:Unit unitId="sv1#page2#enu1">
           <layout:Link link="sv1#page2#enu1#ln3"/>
           <layout:Field field="sv1#page2#enu1#fld1"/>
@@ -25,14 +27,14 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="7">
         <layout:Unit unitId="sv1#page2#mssu2"/>
       </layout:Cell>
       <layout:Cell/>
@@ -41,9 +43,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

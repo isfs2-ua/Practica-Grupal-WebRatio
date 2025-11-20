@@ -8,9 +8,9 @@
         <LinkParameter id="sv2#page4#gtu2#ln5#par22" name="UserCtxParam.id_AttCondition2" source="sv2#page4#gtu2.UserCtxParam" target="sv2#page4#inu3#su8#acond4"/>
       </Link>
     </GetUnit>
-    <IndexUnit id="sv2#page4#inu3" entity="ent5" displayAttributes="ent5#att15 ent5#att14 rel4#role7.ent3#att12" gr:x="0" gr:y="135" name="Lista de suscripciones">
+    <IndexUnit id="sv2#page4#inu3" entity="ent5" gr:x="0" gr:y="135" name="Lista de suscripciones" distinct="false" displayAttributes="rel4#role7.rel2#role4.ent1#att2 rel4#role7.ent3#att12 rel4#role7.ent3#att10 rel4#role7.ent3#att11 ent5#att14 ent5#att15">
       <Selector id="sv2#page4#inu3#su8" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv2#page4#inu3#su8#acond4" attributes="rel5#role9.userOID" predicate="eq" booleanOperator="or" implied="false" name="AttCondition2"/>
+        <AttributesCondition id="sv2#page4#inu3#su8#acond4" predicate="eq" booleanOperator="or" implied="false" name="AttCondition2" attributes="rel5#role9.userOID"/>
       </Selector>
     </IndexUnit>
   </ContentUnits>
@@ -34,9 +34,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page4#inu3">
-          <layout:Attribute attribute="ent5#att15"/>
-          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Attribute attribute="rel4#role7.rel2#role4.ent1#att2"/>
           <layout:Attribute attribute="rel4#role7.ent3#att12"/>
+          <layout:Attribute attribute="rel4#role7.ent3#att10"/>
+          <layout:Attribute attribute="rel4#role7.ent3#att11"/>
+          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Attribute attribute="ent5#att15"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

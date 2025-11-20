@@ -8,7 +8,7 @@
         <LinkParameter id="sv2#page7#gtu5#ln11#par32" name="UserCtxParam.id_user" source="sv2#page7#gtu5.UserCtxParam" target="sv2#page7#enu3#fld9_slot"/>
       </Link>
     </GetUnit>
-    <IndexUnit gr:x="190" gr:y="0" id="sv2#page7#inu4" name="Suscripciones" entity="ent5" displayAttributes="ent5#att15 ent5#att14 rel4#role7.ent3#att12" linkOrder="sv2#page7#inu4#ln16">
+    <IndexUnit gr:x="190" gr:y="0" id="sv2#page7#inu4" name="Suscripciones" entity="ent5" displayAttributes="ent5#att15 ent5#att14 rel4#role7.ent3#att12 rel4#role7.rel2#role4.ent1#att2" linkOrder="sv2#page7#inu4#ln16">
       <Selector id="sv2#page7#inu4#su14" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#page7#inu4#su14#acond5" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role9.userOID"/>
       </Selector>
@@ -39,10 +39,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page7#inu4">
+          <layout:Link link="sv2#page7#inu4#ln16"/>
           <layout:Attribute attribute="ent5#att15"/>
           <layout:Attribute attribute="ent5#att14"/>
           <layout:Attribute attribute="rel4#role7.ent3#att12"/>
-          <layout:Link link="sv2#page7#inu4#ln16"/>
+          <layout:Attribute attribute="rel4#role7.rel2#role4.ent1#att2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

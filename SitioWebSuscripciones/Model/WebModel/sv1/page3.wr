@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="205" gr:y="280" id="sv1#page3" name="registro">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="355" id="sv1#page3" name="registro">
   <ContentUnits>
     <MultiMessageUnit gr:x="5" gr:y="105" id="sv1#page3#mssu3" name="error"/>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu2" name="registro" entity="User" linkOrder="sv1#page3#enu2#ln8">
@@ -22,9 +22,7 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page3#mssu3"/>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -46,6 +44,22 @@
           <layout:Field field="sv1#page3#enu2#sfld1"/>
           <layout:Link link="sv1#page3#enu2#ln8"/>
         </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#mssu3"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

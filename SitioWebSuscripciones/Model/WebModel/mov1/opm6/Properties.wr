@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="625" gr:y="395" id="mov1#opm6" name="crear plan">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="370" id="mov1#opm6" name="crear o modificar plan">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm6#icu6" gr:x="10" gr:y="110">
       <OKLink id="mov1#opm6#icu6#oln26" name="OKFlow26" to="mov1#opm6#inn5">
@@ -37,7 +37,7 @@
       <OKLink id="mov1#opm6#mfu5#oln24" name="OKFlow11" to="mov1#opm6#okcu8" automaticCoupling="true"/>
       <KOLink id="mov1#opm6#mfu5#kln20" name="KOFlow8" to="mov1#opm6#kocu7" automaticCoupling="true"/>
     </ModifyUnit>
-    <IsNotNullUnit id="mov1#opm6#inn5" name="si existe" gr:x="300" gr:y="150">
+    <IsNotNullUnit id="mov1#opm6#inn5" name="si existe" gr:x="300" gr:y="150" emptyStringAsNull="true">
       <OKLink id="mov1#opm6#inn5#oln25" name="OKFlow9" to="mov1#opm6#mfu5" automaticCoupling="true"/>
       <KOLink id="mov1#opm6#inn5#kln21" name="KOFlow5" to="mov1#opm6#cru10" automaticCoupling="true"/>
     </IsNotNullUnit>

@@ -1,53 +1,26 @@
-[14 nov 2025 00:21:12] DEBUG Executing SQL script
-[14 nov 2025 00:21:12] INFO ================================================================================
-[14 nov 2025 00:21:12] INFO onError= 'stop'
-[14 nov 2025 00:21:12] INFO autoCommit= 'false'
-[14 nov 2025 00:21:12] INFO username= 'postgres'
-[14 nov 2025 00:21:12] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml'
-[14 nov 2025 00:21:12] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml.log'
-[14 nov 2025 00:21:12] INFO encoding= ''
-[14 nov 2025 00:21:12] INFO driverClass= 'org.postgresql.Driver'
-[14 nov 2025 00:21:12] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql'
-[14 nov 2025 00:21:12] INFO eventSocketPort= '63914'
-[14 nov 2025 00:21:12] INFO statementSeparator= ';'
-[14 nov 2025 00:21:12] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[14 nov 2025 00:21:12] INFO password= 'iweb'
-[14 nov 2025 00:21:12] INFO url= 'jdbc:postgresql://localhost:5432/databaseGrupal'
-[14 nov 2025 00:21:12] INFO ================================================================================
-[14 nov 2025 00:21:12] INFO Connecting to the Database...
-[14 nov 2025 00:21:12] INFO Database connection estabilished
-[14 nov 2025 00:21:12] INFO transaction isolation: 2
-[14 nov 2025 00:21:12] DEBUG ================================================================================
-[14 nov 2025 00:21:12] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql
-[14 nov 2025 00:21:12] DEBUG Executing statement:  create table "public"."group" ( "id"  int4  not null, "groupname"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:12] DEBUG Executing statement:    create table "public"."module" ( "id"  int4  not null, "moduleid"  varchar(255), "modulename"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:12] DEBUG Executing statement:    create table "public"."user" ( "id"  int4  not null, "username"  varchar(255), "password"  varchar(255), "email"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:12] DEBUG Executing statement:    create table "public"."servicio" ( "id"  int4  not null, "name"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:12] DEBUG Executing statement:    create table "public"."categoria" ( "id"  int4  not null, "name"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:12] DEBUG Executing statement:    create table "public"."plan" ( "id"  int4  not null, "type"  varchar(255), "price"  numeric(19, 2), "nombre"  varchar(255), primary key ("id") )
-[14 nov 2025 00:21:13] DEBUG Executing statement:    create table "public"."suscrito_2" ( "id"  int4  not null, "renovationdate"  date, "active"  bool, primary key ("id") )
-[14 nov 2025 00:21:13] DEBUG Executing statement:    create table "public"."pago" ( "id_pago"  int4  not null, "paymentdate"  date, primary key ("id_pago") )
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."group"  add column  "module_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."group"   add constraint fk_group_module foreign key ("module_id") references "public"."module" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    create table "public"."group_module" ( "group_id"  int4 not null, "module_id"  int4 not null, primary key ("group_id", "module_id") )
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_group foreign key ("group_id") references "public"."group" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_module foreign key ("module_id") references "public"."module" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."user"  add column  "group_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."user"   add constraint fk_user_group foreign key ("group_id") references "public"."group" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    create table "public"."user_group" ( "user_id"  int4 not null, "group_id"  int4 not null, primary key ("user_id", "group_id") )
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_user foreign key ("user_id") references "public"."user" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_group foreign key ("group_id") references "public"."group" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."servicio"  add column  "categoria_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."servicio"   add constraint fk_servicio_categoria foreign key ("categoria_id") references "public"."categoria" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."plan"  add column  "servicio_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."plan"   add constraint fk_plan_servicio foreign key ("servicio_id") references "public"."servicio" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."pago"  add column  "suscrito_2_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."pago"   add constraint fk_pago_suscrito_2 foreign key ("suscrito_2_id") references "public"."suscrito_2" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."suscrito_2"  add column  "plan_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."suscrito_2"   add constraint fk_suscrito_2_plan foreign key ("plan_id") references "public"."plan" ("id")
-[14 nov 2025 00:21:13] DEBUG Executing statement:    alter table "public"."suscrito_2"  add column  "user_id"  int4
-[14 nov 2025 00:21:13] DEBUG Executing statement:  alter table "public"."suscrito_2"   add constraint fk_suscrito_2_user foreign key ("user_id") references "public"."user" ("id")
-[14 nov 2025 00:21:13] DEBUG ================================================================================
-[14 nov 2025 00:21:13] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[14 nov 2025 00:21:13] INFO Database connection closed
-[14 nov 2025 00:21:13] DEBUG Total time: 291 milliseconds
+[20 nov 2025 00:19:03] DEBUG Executing SQL script
+[20 nov 2025 00:19:03] INFO ================================================================================
+[20 nov 2025 00:19:03] INFO onError= 'stop'
+[20 nov 2025 00:19:03] INFO autoCommit= 'false'
+[20 nov 2025 00:19:03] INFO username= 'postgres'
+[20 nov 2025 00:19:03] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml'
+[20 nov 2025 00:19:03] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml.log'
+[20 nov 2025 00:19:03] INFO encoding= ''
+[20 nov 2025 00:19:03] INFO driverClass= 'org.postgresql.Driver'
+[20 nov 2025 00:19:03] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql'
+[20 nov 2025 00:19:03] INFO eventSocketPort= '61816'
+[20 nov 2025 00:19:03] INFO statementSeparator= ';'
+[20 nov 2025 00:19:03] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[20 nov 2025 00:19:03] INFO password= 'iweb'
+[20 nov 2025 00:19:03] INFO url= 'jdbc:postgresql://localhost:5432/databaseGrupal'
+[20 nov 2025 00:19:03] INFO ================================================================================
+[20 nov 2025 00:19:03] INFO Connecting to the Database...
+[20 nov 2025 00:19:03] INFO Database connection estabilished
+[20 nov 2025 00:19:03] INFO transaction isolation: 2
+[20 nov 2025 00:19:03] DEBUG ================================================================================
+[20 nov 2025 00:19:03] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql
+[20 nov 2025 00:19:03] DEBUG Executing statement:  create table "public"."entity4" ( "oid"  int4  not null, primary key ("oid") )
+[20 nov 2025 00:19:03] DEBUG ================================================================================
+[20 nov 2025 00:19:03] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[20 nov 2025 00:19:03] INFO Database connection closed
+[20 nov 2025 00:19:03] DEBUG Total time: 215 milliseconds

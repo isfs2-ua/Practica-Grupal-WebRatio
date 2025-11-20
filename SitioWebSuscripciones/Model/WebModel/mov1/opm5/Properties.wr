@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="265" id="mov1#opm5" name="crear o modificar servicio">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="25" gr:y="75" linkOrder="mov1#opm5#icu5#ln19 mov1#opm5#icu5#ln20">
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="25" gr:y="75">
       <OKLink id="mov1#opm5#icu5#oln22" name="OKFlow22" to="mov1#opm5#inn4">
         <LinkParameter id="mov1#opm5#icu5#oln22#par35" name="id_Input" source="mov1#opm5#icu5#icp9" target="mov1#opm5#inn4.isnotnull"/>
       </OKLink>
@@ -11,12 +11,15 @@
         <LinkParameter id="mov1#opm5#icu5#ln19#par36" name="id_KeyCondition4 [id]" source="mov1#opm5#icu5#icp9" target="mov1#opm5#mfu4#su9#kcond7.ent1#att1"/>
         <LinkParameter id="mov1#opm5#icu5#ln19#par37" name="name_name" source="mov1#opm5#icu5#icp10" target="mov1#opm5#mfu4.ent1#att2"/>
         <LinkParameter id="mov1#opm5#icu5#ln19#par38" name="categoria_Categor&#237;a.id(ServicioToCategor&#237;a)" source="mov1#opm5#icu5#icp11" target="mov1#opm5#mfu4.rel1#role2.ent2#att3"/>
+        <LinkParameter id="mov1#opm5#icu5#ln19#par91" name="imagen_imagen" source="mov1#opm5#icu5#icp26" target="mov1#opm5#mfu4.ent1#att7"/>
       </Link>
       <Link id="mov1#opm5#icu5#ln20" name="Flow20" to="mov1#opm5#cru9" type="transport" validate="true" gr:bendpoints="150,76,-200,1">
         <LinkParameter id="mov1#opm5#icu5#ln20#par39" name="categoria_Categor&#237;a.id(ServicioToCategor&#237;a)" source="mov1#opm5#icu5#icp11" target="mov1#opm5#cru9.rel1#role2.ent2#att3"/>
         <LinkParameter id="mov1#opm5#icu5#ln20#par40" name="id_id" source="mov1#opm5#icu5#icp9" target="mov1#opm5#cru9.ent1#att1"/>
         <LinkParameter id="mov1#opm5#icu5#ln20#par41" name="name_name" source="mov1#opm5#icu5#icp10" target="mov1#opm5#cru9.ent1#att2"/>
+        <LinkParameter id="mov1#opm5#icu5#ln20#par92" name="imagen_imagen" source="mov1#opm5#icu5#icp26" target="mov1#opm5#cru9.ent1#att7"/>
       </Link>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp26" name="imagen"/>
     </InputCollectorUnit>
     <KOCollectorUnit id="mov1#opm5#kocu6" name="KO Port3" gr:x="650" gr:y="165"/>
     <CreateUnit id="mov1#opm5#cru9" name="crear" gr:x="445" gr:y="165" entity="ent1">

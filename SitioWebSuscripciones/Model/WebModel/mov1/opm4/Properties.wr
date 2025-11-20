@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="230" gr:y="370" id="mov1#opm4" name="crear categoria">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="95" gr:y="205">
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="90" gr:y="190">
       <InputCollectorParameter id="mov1#opm4#icu4#icp7" name="id"/>
       <InputCollectorParameter id="mov1#opm4#icu4#icp8" name="name"/>
       <Link id="mov1#opm4#icu4#ln17" name="Flow17" to="mov1#opm4#cru3" type="transport" validate="true">
@@ -8,7 +8,7 @@
         <LinkParameter id="mov1#opm4#icu4#ln17#par34" name="name_name" source="mov1#opm4#icu4#icp8" target="mov1#opm4#cru3.ent2#att4"/>
       </Link>
     </InputCollectorUnit>
-    <CreateUnit gr:x="445" gr:y="205" id="mov1#opm4#cru3" name="crear" entity="ent2">
+    <CreateUnit gr:x="445" gr:y="190" id="mov1#opm4#cru3" name="crear" entity="ent2">
       <OKLink id="mov1#opm4#cru3#oln12" name="OKFlow12" to="mov1#opm4#okcu3" automaticCoupling="true"/>
       <KOLink id="mov1#opm4#cru3#kln9" name="KOFlow9" to="mov1#opm4#kocu3" automaticCoupling="true"/>
     </CreateUnit>
