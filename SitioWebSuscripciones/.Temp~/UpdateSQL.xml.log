@@ -1,26 +1,29 @@
-[20 nov 2025 00:19:03] DEBUG Executing SQL script
-[20 nov 2025 00:19:03] INFO ================================================================================
-[20 nov 2025 00:19:03] INFO onError= 'stop'
-[20 nov 2025 00:19:03] INFO autoCommit= 'false'
-[20 nov 2025 00:19:03] INFO username= 'postgres'
-[20 nov 2025 00:19:03] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml'
-[20 nov 2025 00:19:03] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml.log'
-[20 nov 2025 00:19:03] INFO encoding= ''
-[20 nov 2025 00:19:03] INFO driverClass= 'org.postgresql.Driver'
-[20 nov 2025 00:19:03] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql'
-[20 nov 2025 00:19:03] INFO eventSocketPort= '61816'
-[20 nov 2025 00:19:03] INFO statementSeparator= ';'
-[20 nov 2025 00:19:03] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[20 nov 2025 00:19:03] INFO password= 'iweb'
-[20 nov 2025 00:19:03] INFO url= 'jdbc:postgresql://localhost:5432/databaseGrupal'
-[20 nov 2025 00:19:03] INFO ================================================================================
-[20 nov 2025 00:19:03] INFO Connecting to the Database...
-[20 nov 2025 00:19:03] INFO Database connection estabilished
-[20 nov 2025 00:19:03] INFO transaction isolation: 2
-[20 nov 2025 00:19:03] DEBUG ================================================================================
-[20 nov 2025 00:19:03] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql
-[20 nov 2025 00:19:03] DEBUG Executing statement:  create table "public"."entity4" ( "oid"  int4  not null, primary key ("oid") )
-[20 nov 2025 00:19:03] DEBUG ================================================================================
-[20 nov 2025 00:19:03] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[20 nov 2025 00:19:03] INFO Database connection closed
-[20 nov 2025 00:19:03] DEBUG Total time: 215 milliseconds
+[21 nov 2025 01:04:22] DEBUG Executing SQL script
+[21 nov 2025 01:04:22] INFO ================================================================================
+[21 nov 2025 01:04:22] INFO onError= 'stop'
+[21 nov 2025 01:04:22] INFO autoCommit= 'false'
+[21 nov 2025 01:04:22] INFO username= 'postgres'
+[21 nov 2025 01:04:22] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml'
+[21 nov 2025 01:04:22] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.xml.log'
+[21 nov 2025 01:04:22] INFO encoding= ''
+[21 nov 2025 01:04:22] INFO driverClass= 'org.postgresql.Driver'
+[21 nov 2025 01:04:22] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql'
+[21 nov 2025 01:04:22] INFO eventSocketPort= '59107'
+[21 nov 2025 01:04:22] INFO statementSeparator= ';'
+[21 nov 2025 01:04:22] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[21 nov 2025 01:04:22] INFO password= 'iweb'
+[21 nov 2025 01:04:22] INFO url= 'jdbc:postgresql://localhost:5432/databaseGrupal'
+[21 nov 2025 01:04:22] INFO ================================================================================
+[21 nov 2025 01:04:22] INFO Connecting to the Database...
+[21 nov 2025 01:04:22] INFO Database connection estabilished
+[21 nov 2025 01:04:22] INFO transaction isolation: 2
+[21 nov 2025 01:04:22] DEBUG ================================================================================
+[21 nov 2025 01:04:22] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~\UpdateSQL.sql
+[21 nov 2025 01:04:22] DEBUG Executing statement:  create table "public"."entity6" ( "id"  int4  not null, primary key ("id") )
+[21 nov 2025 01:04:22] DEBUG Executing statement:    alter table "public"."plan"  add column  "entity6_id"  int4
+[21 nov 2025 01:04:22] DEBUG Executing statement:  alter table "public"."plan"   add constraint fk_plan_entity6 foreign key ("entity6_id") references "public"."entity6" ("id")
+[21 nov 2025 01:04:22] DEBUG Executing statement:    create view "public"."entity6_total_view" as select AL1."id" as "id", sum(AL3."price") as "der_attr" from  "public"."entity6" AL1 left outer join "public"."plan" AL2 on AL1."id"=AL2."entity6_id" left outer join "public"."plan" AL3 on AL2."id"=AL3."id" group by AL1."id"
+[21 nov 2025 01:04:22] DEBUG ================================================================================
+[21 nov 2025 01:04:22] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[21 nov 2025 01:04:22] INFO Database connection closed
+[21 nov 2025 01:04:22] DEBUG Total time: 224 milliseconds

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="50" gr:y="250" id="sv3#page9" name="Plan" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="30" id="sv3#page9#enu4" name="Formulario" linkOrder="sv3#page9#enu4#ln15" entity="ent3">
+    <EntryUnit gr:x="0" gr:y="30" id="sv3#page9#enu4" name="Formulario plan" linkOrder="sv3#page9#enu4#ln15" entity="ent3">
       <Link id="sv3#page9#enu4#ln15" name="Crear o modificar plan" to="sv3#miu6" type="normal" validate="true">
         <LinkParameter id="sv3#page9#enu4#ln15#par67" name="nombre_nombre" source="sv3#page9#enu4#fld7" target="sv3#miu6.mov1#opm6#icu6#icp13"/>
         <LinkParameter id="sv3#page9#enu4#ln15#par68" name="price_precio" source="sv3#page9#enu4#fld11" target="sv3#miu6.mov1#opm6#icu6#icp14"/>
@@ -14,7 +14,7 @@
       <SelectionField id="sv3#page9#enu4#sfld2" name="PlanToServicio" type="string" role="rel2#role4"/>
       <Field id="sv3#page9#enu4#fld17" name="id" type="string" modifiable="false" hidden="true" preloaded="true"/>
     </EntryUnit>
-    <SelectorUnit gr:x="130" gr:y="95" id="sv3#page9#seu3" name="Selector3" entity="ent1">
+    <SelectorUnit gr:x="165" gr:y="95" id="sv3#page9#seu3" name="Servicio" entity="ent1">
       <Link id="sv3#page9#seu3#ln28" name="Flow28" to="sv3#page9#enu4" type="transport" validate="true">
         <LinkParameter id="sv3#page9#seu3#ln28#par65" name="name_PlanToServicio [label]" source="ent1#att2Array" target="sv3#page9#enu4#sfld2_label"/>
         <LinkParameter id="sv3#page9#seu3#ln28#par66" name="id_PlanToServicio [output]" source="ent1#att1Array" target="sv3#page9#enu4#sfld2_output"/>

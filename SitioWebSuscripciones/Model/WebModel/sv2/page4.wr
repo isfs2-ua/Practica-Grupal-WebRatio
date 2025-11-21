@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="40" id="sv2#page4" name="Registrados">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="-10" id="sv2#page4" name="Registrados">
   <ContentUnits>
     <MultiMessageUnit gr:x="155" gr:y="5" id="sv2#page4#mssu4" name="Bienvenida">
       <Message xml:space="preserve">Esta es la vista de registrados</Message>
@@ -7,12 +7,20 @@
       <Link id="sv2#page4#gtu2#ln5" name="Flow5" to="sv2#page4#inu3" type="transport" validate="true">
         <LinkParameter id="sv2#page4#gtu2#ln5#par22" name="UserCtxParam.id_AttCondition2" source="sv2#page4#gtu2.UserCtxParam" target="sv2#page4#inu3#su8#acond4"/>
       </Link>
+      <Link id="sv2#page4#gtu2#ln30" name="Flow30" to="sv2#page4#dau3" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu2#ln30#par24" name="UserCtxParam.id_KeyCondition4 [id]" source="sv2#page4#gtu2.UserCtxParam" target="sv2#page4#dau3#su2#kcond4.userOID"/>
+      </Link>
     </GetUnit>
-    <IndexUnit id="sv2#page4#inu3" entity="ent5" gr:x="0" gr:y="135" name="Lista de suscripciones" distinct="false" displayAttributes="rel4#role7.rel2#role4.ent1#att2 rel4#role7.ent3#att12 rel4#role7.ent3#att10 rel4#role7.ent3#att11 ent5#att14 ent5#att15">
+    <IndexUnit id="sv2#page4#inu3" entity="ent5" gr:x="0" gr:y="135" name="Lista de suscripciones" distinct="false" displayAttributes="rel4#role7.rel2#role4.ent1#att2 rel4#role7.ent3#att12 rel4#role7.ent3#att10 rel4#role7.ent3#att11 ent5#att14 ent5#att15 rel4#role7.rel2#role4.ent1#att7">
       <Selector id="sv2#page4#inu3#su8" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#page4#inu3#su8#acond4" predicate="eq" booleanOperator="or" implied="false" name="AttCondition2" attributes="rel5#role9.userOID"/>
       </Selector>
     </IndexUnit>
+    <DataUnit gr:x="220" gr:y="115" id="sv2#page4#dau3" name="Gasto total" entity="User" displayAttributes="User#att20">
+      <Selector id="sv2#page4#dau3#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page4#dau3#su2#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -40,6 +48,53 @@
           <layout:Attribute attribute="rel4#role7.ent3#att11"/>
           <layout:Attribute attribute="ent5#att14"/>
           <layout:Attribute attribute="ent5#att15"/>
+          <layout:Attribute attribute="rel4#role7.rel2#role4.ent1#att7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#dau3">
+          <layout:Attribute attribute="User#att20"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

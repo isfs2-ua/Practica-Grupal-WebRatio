@@ -1,9 +1,12 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="255" gr:y="130" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="255" gr:y="130" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att20" db:database="db1" db:table="user">
     <Attribute name="id" id="userOID" type="integer" key="true" db:column="id"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
+    <Attribute id="User#att20" name="totalGasto" type="decimal" derivationQuery="calculated::sum(Self.rel5#role10(as Var1).rel4#role7(as Var2).ent3#att11)" db:table="user_totalgasto_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="userOID" name="id"/>
+    </Attribute>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="485" gr:y="150" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="id" id="groupOID" type="integer" key="true" db:column="id"/>
@@ -49,7 +52,7 @@
   <Entity gr:x="575" gr:y="295" id="ent1" name="Servicio" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att7" db:database="db1" db:table="servicio">
     <Attribute id="ent1#att1" key="true" name="id" type="integer" db:column="id"/>
     <Attribute id="ent1#att2" name="name" type="string" db:column="name"/>
-    <Attribute id="ent1#att7" name="imagen" type="string" db:column="imagen"/>
+    <Attribute id="ent1#att7" name="imagen" type="blob" db:column="imagen" contentType="image" uploadPolicy="managed" storageType="file"/>
   </Entity>
   <Entity gr:x="820" gr:y="305" id="ent2" name="Categor&#237;a" duration="persistent" attributeOrder="ent2#att3 ent2#att4" db:database="db1" db:table="categoria">
     <Attribute id="ent2#att3" key="true" name="id" type="integer" db:column="id"/>
@@ -59,7 +62,7 @@
     <Attribute id="ent3#att5" key="true" name="id" type="integer" db:column="id"/>
     <Attribute id="ent3#att10" name="type" type="string" db:column="type"/>
     <Attribute id="ent3#att11" name="price" type="decimal" db:column="price"/>
-    <Attribute id="ent3#att12" name="nombre" type="string" db:column="nombre"/>
+    <Attribute id="ent3#att12" name="paquete" type="string" db:column="nombre"/>
   </Entity>
   <Relationship id="rel1" name="Categor&#237;a_Servicio" sourceEntity="ent2" targetEntity="ent1" db:database="db1" db:table="servicio">
     <RelationshipRole1 id="rel1#role1" name="Categor&#237;aToServicio" maxCard="N">

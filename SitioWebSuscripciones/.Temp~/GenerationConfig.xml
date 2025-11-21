@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.18.201903231300\lib</Property>
-    <Property name="dbConfigPath">C:\Users\Dany\AppData\Local\Temp\WRDBConfig397713727381760685.xml</Property>
+    <Property name="dbConfigPath">C:\Users\Dany\AppData\Local\Temp\WRDBConfig7411527741353264235.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
     <Property name="derbySystemHome">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">59376</Property>
+    <Property name="eventSocketPort">65480</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">202511200104</Property>
+    <Property name="generationTime">202511212200</Property>
     <Property name="helpersPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.18.201903231300</Property>
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
@@ -22,17 +22,17 @@
     <Property name="lockDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones\.Temp~</Property>
     <Property name="normalizeDescriptors">false</Property>
     <Property name="outputPath">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\SitioWebSuscripciones</Property>
-    <Property name="phases">Struts13PagesOnly</Property>
+    <Property name="phases">All</Property>
     <Property name="projectDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Practica-Grupal-WebRatio\SitioWebSuscripciones</Property>
     <Property name="projectName">SitioWebSuscripciones</Property>
-    <Property name="projectPath">C:\Users\Dany\AppData\Local\Temp\Project4267103688613984247.wr</Property>
+    <Property name="projectPath">C:\Users\Dany\AppData\Local\Temp\Project6773010641024138380.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.ide.ui_7.2.18.201903231300</Property>
     <Property name="webappPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.webapp_7.2.18.201903231300</Property>
     <Property name="wrBuildId">201903231300</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=9|units=76</Property>
+    <Property name="wrModelStatistics">pages=9|units=81</Property>
     <Property name="wrVersion">7.2.18</Property>
   </Properties>
   <Plugins>
