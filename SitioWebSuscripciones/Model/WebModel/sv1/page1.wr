@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="255" gr:y="95" id="sv1#page1" name="Inicio">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="220" gr:y="75" id="sv1#page1" name="Inicio">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Entrada" linkOrder="sv1#page1#mssu1#ln2 sv1#page1#mssu1#ln6">
+    <MultiMessageUnit gr:x="0" gr:y="25" id="sv1#page1#mssu1" name="Entrada" linkOrder="sv1#page1#mssu1#ln2 sv1#page1#mssu1#ln6">
       <Message xml:space="preserve">Bienvenido a tu gestor de Suscripciones</Message>
       <Link id="sv1#page1#mssu1#ln2" name="Login" to="sv1#page2" automaticCoupling="true" type="normal" validate="true"/>
       <Link id="sv1#page1#mssu1#ln6" name="Registro" to="sv1#page3" automaticCoupling="true" type="normal" validate="true"/>
@@ -14,6 +14,34 @@
           <layout:Link link="sv1#page1#mssu1#ln6"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

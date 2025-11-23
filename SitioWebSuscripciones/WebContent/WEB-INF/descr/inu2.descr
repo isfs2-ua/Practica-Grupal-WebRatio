@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.IndexUnitService" name="Listado de servicios">
+  <UseFirstRowAsDefaultCurrent>false</UseFirstRowAsDefaultCurrent>
+  <MaxResults/>
+  <Query entity="ent1">
+    <Output id="att1" name="id" index="0"/>
+    <Output id="att7" name="imagen" blob="true" index="1"/>
+    <Output id="att2" name="name" index="2"/>
+    <HQL>select a_servicio.id, a_servicio.imagenRef, a_servicio.name from Servicio a_servicio</HQL>
+  </Query>
+</Descriptor>
+ 

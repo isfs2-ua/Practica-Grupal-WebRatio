@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="50" gr:y="250" id="sv3#page9" name="Plan" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="30" id="sv3#page9#enu4" name="Formulario plan" linkOrder="sv3#page9#enu4#ln15" entity="ent3">
+      <Link id="sv3#page9#enu4#ln15" name="Crear o modificar plan" to="sv3#miu6" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#enu4#ln15#par67" name="nombre_nombre" source="sv3#page9#enu4#fld7" target="sv3#miu6.mov1#opm6#icu6#icp13"/>
+        <LinkParameter id="sv3#page9#enu4#ln15#par68" name="price_precio" source="sv3#page9#enu4#fld11" target="sv3#miu6.mov1#opm6#icu6#icp14"/>
+        <LinkParameter id="sv3#page9#enu4#ln15#par69" name="PlanToServicio_servicio" source="sv3#page9#enu4#sfld2" target="sv3#miu6.mov1#opm6#icu6#icp16"/>
+        <LinkParameter id="sv3#page9#enu4#ln15#par70" name="type_tipo" source="sv3#page9#enu4#fld8" target="sv3#miu6.mov1#opm6#icu6#icp15"/>
+        <LinkParameter id="sv3#page9#enu4#ln15#par89" name="id_id" source="sv3#page9#enu4#fld17" target="sv3#miu6.mov1#opm6#icu6#icp12"/>
+      </Link>
+      <Field id="sv3#page9#enu4#fld7" name="Paquete" type="string" modifiable="true" attribute="ent3#att12" preloaded="true"/>
+      <Field id="sv3#page9#enu4#fld8" name="Tipo" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv3#page9#enu4#fld11" name="Precio" type="decimal" modifiable="true" attribute="ent3#att11" preloaded="true"/>
+      <SelectionField id="sv3#page9#enu4#sfld2" name="Servicio" type="string" role="rel2#role4"/>
+      <Field id="sv3#page9#enu4#fld17" name="id" type="string" modifiable="false" hidden="true" preloaded="true"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="165" gr:y="95" id="sv3#page9#seu3" name="Servicio" entity="ent1">
+      <Link id="sv3#page9#seu3#ln28" name="Flow28" to="sv3#page9#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page9#seu3#ln28#par65" name="name_PlanToServicio [label]" source="ent1#att2Array" target="sv3#page9#enu4#sfld2_label"/>
+        <LinkParameter id="sv3#page9#seu3#ln28#par66" name="id_PlanToServicio [output]" source="ent1#att1Array" target="sv3#page9#enu4#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit id="sv3#page9#inu1" entity="ent3" displayAttributes="ent3#att12 ent3#att11 ent3#att10" gr:x="225" gr:y="0" name="Listado de planes" linkOrder="sv3#page9#inu1#ln32 sv3#page9#inu1#ln33">
+      <Link id="sv3#page9#inu1#ln32" name="Borrar" to="sv3#miu8" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#inu1#ln32#par83" name="id_id" source="data[].ent3#att5" target="sv3#miu8.mov1#opm9#icu9#icp18"/>
+      </Link>
+      <Link id="sv3#page9#inu1#ln33" name="Modificar" to="sv3#page9#enu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#inu1#ln33#par84" name="id_id" source="data[].ent3#att5" target="sv3#page9#enu4#fld17_slot"/>
+        <LinkParameter id="sv3#page9#inu1#ln33#par85" name="nombre_nombre" source="data[].ent3#att12" target="sv3#page9#enu4#fld7_slot"/>
+        <LinkParameter id="sv3#page9#inu1#ln33#par86" name="PlanToServicio.id_PlanToServicio [output]" source="data[].rel2#role4_ent1#att1" target="sv3#page9#enu4#sfld2_output"/>
+        <LinkParameter id="sv3#page9#inu1#ln33#par87" name="price_price" source="data[].ent3#att11" target="sv3#page9#enu4#fld11_slot"/>
+        <LinkParameter id="sv3#page9#inu1#ln33#par88" name="type_type" source="data[].ent3#att10" target="sv3#page9#enu4#fld8_slot"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page9#inu1">
+          <layout:Link link="sv3#page9#inu1#ln32"/>
+          <layout:Link link="sv3#page9#inu1#ln33"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page9#enu4">
+          <layout:Link link="sv3#page9#enu4#ln15"/>
+          <layout:Field field="sv3#page9#enu4#fld7"/>
+          <layout:Field field="sv3#page9#enu4#fld8"/>
+          <layout:Field field="sv3#page9#enu4#fld11"/>
+          <layout:Field field="sv3#page9#enu4#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

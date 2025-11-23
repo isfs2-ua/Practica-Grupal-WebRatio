@@ -1,3 +1,11 @@
-<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="registrados" homePage="sv2#page4" layout:style="BootstrapStyle">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="registrados" layout:style="BootstrapStyle" homePage="sv2#page4" landmarks="sv2#page7">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="375" gr:y="430" id="sv2#miu2" action="true" moduleId="mov1#opm2"/>
+    <CreateUnit gr:x="590" gr:y="340" id="sv2#cru2" name="Crear suscripcion" gr:showAllParts="false" entity="ent5"/>
+    <DeleteUnit gr:x="930" gr:y="60" id="sv2#dlu1" name="Borrar suscrpcion" entity="ent5">
+      <Selector id="sv2#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
+  </OperationUnits>
 </SiteView>
