@@ -8,10 +8,10 @@
         <LinkParameter id="sv3#page9#enu4#ln15#par70" name="type_tipo" source="sv3#page9#enu4#fld8" target="sv3#miu6.mov1#opm6#icu6#icp15"/>
         <LinkParameter id="sv3#page9#enu4#ln15#par89" name="id_id" source="sv3#page9#enu4#fld17" target="sv3#miu6.mov1#opm6#icu6#icp12"/>
       </Link>
-      <Field id="sv3#page9#enu4#fld7" name="nombre" type="string" modifiable="true" attribute="ent3#att12" preloaded="true"/>
-      <Field id="sv3#page9#enu4#fld8" name="type" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
-      <Field id="sv3#page9#enu4#fld11" name="price" type="decimal" modifiable="true" attribute="ent3#att11" preloaded="true"/>
-      <SelectionField id="sv3#page9#enu4#sfld2" name="PlanToServicio" type="string" role="rel2#role4"/>
+      <Field id="sv3#page9#enu4#fld7" name="Paquete" type="string" modifiable="true" attribute="ent3#att12" preloaded="true"/>
+      <Field id="sv3#page9#enu4#fld8" name="Tipo" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv3#page9#enu4#fld11" name="Precio" type="decimal" modifiable="true" attribute="ent3#att11" preloaded="true"/>
+      <SelectionField id="sv3#page9#enu4#sfld2" name="Servicio" type="string" role="rel2#role4"/>
       <Field id="sv3#page9#enu4#fld17" name="id" type="string" modifiable="false" hidden="true" preloaded="true"/>
     </EntryUnit>
     <SelectorUnit gr:x="165" gr:y="95" id="sv3#page9#seu3" name="Servicio" entity="ent1">
@@ -20,7 +20,7 @@
         <LinkParameter id="sv3#page9#seu3#ln28#par66" name="id_PlanToServicio [output]" source="ent1#att1Array" target="sv3#page9#enu4#sfld2_output"/>
       </Link>
     </SelectorUnit>
-    <IndexUnit id="sv3#page9#inu1" entity="ent3" displayAttributes="ent3#att12 ent3#att11 ent3#att10 rel2#role4.ent1#att2" gr:x="225" gr:y="0" name="Listado de planes" linkOrder="sv3#page9#inu1#ln32 sv3#page9#inu1#ln33">
+    <IndexUnit id="sv3#page9#inu1" entity="ent3" displayAttributes="ent3#att12 ent3#att11 ent3#att10" gr:x="225" gr:y="0" name="Listado de planes" linkOrder="sv3#page9#inu1#ln32 sv3#page9#inu1#ln33">
       <Link id="sv3#page9#inu1#ln32" name="Borrar" to="sv3#miu8" type="normal" validate="true">
         <LinkParameter id="sv3#page9#inu1#ln32#par83" name="id_id" source="data[].ent3#att5" target="sv3#miu8.mov1#opm9#icu9#icp18"/>
       </Link>
@@ -37,12 +37,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page9#inu1">
+          <layout:Link link="sv3#page9#inu1#ln32"/>
+          <layout:Link link="sv3#page9#inu1#ln33"/>
           <layout:Attribute attribute="ent3#att12"/>
           <layout:Attribute attribute="ent3#att11"/>
           <layout:Attribute attribute="ent3#att10"/>
-          <layout:Attribute attribute="rel2#role4.ent1#att2"/>
-          <layout:Link link="sv3#page9#inu1#ln32"/>
-          <layout:Link link="sv3#page9#inu1#ln33"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

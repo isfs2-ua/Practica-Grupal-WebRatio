@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="120" id="sv1#page2" name="login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="230" id="sv1#page2" name="login">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page2#enu1" name="form login" linkOrder="sv1#page2#enu1#ln3">
       <Link id="sv1#page2#enu1#ln3" name="OK" to="sv1#miu1" type="normal" validate="true">

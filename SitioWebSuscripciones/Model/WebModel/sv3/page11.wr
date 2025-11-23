@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="720" gr:y="45" id="sv3#page11" name="Categoria" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="5" id="sv3#page11#enu6" name="Formulario cat" linkOrder="sv3#page11#enu6#ln24" entity="ent2">
+    <EntryUnit gr:x="0" gr:y="5" id="sv3#page11#enu6" name="Formulario" linkOrder="sv3#page11#enu6#ln24" entity="ent2" fieldOrder="sv3#page11#enu6#fld6">
       <Link id="sv3#page11#enu6#ln24" name="Crear categoria" to="sv3#miu5" type="normal" validate="true">
         <LinkParameter id="sv3#page11#enu6#ln24#par58" name="name" source="sv3#page11#enu6#fld6" target="sv3#miu5.mov1#opm4#icu4#icp8"/>
       </Link>
