@@ -122,6 +122,5 @@
       <db:JoinColumn attribute="ent5#att13" name="suscrito_2_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="aXdlYg==" schema="public">
-  </db:Database>
+  <db:Database id="db2" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
 </DataModel>

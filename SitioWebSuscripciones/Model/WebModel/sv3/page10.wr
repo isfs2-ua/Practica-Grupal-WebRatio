@@ -5,11 +5,12 @@
         <LinkParameter id="sv3#page10#enu5#ln26#par60" name="name_name" source="sv3#page10#enu5#fld12" target="sv3#miu7.mov1#opm5#icu5#icp10"/>
         <LinkParameter id="sv3#page10#enu5#ln26#par63" name="ServicioToCategor&#237;a_categoria" source="sv3#page10#enu5#sfld3" target="sv3#miu7.mov1#opm5#icu5#icp11"/>
         <LinkParameter id="sv3#page10#enu5#ln26#par93" name="imagen_imagen" source="sv3#page10#enu5#fld25" target="sv3#miu7.mov1#opm5#icu5#icp26"/>
-        <LinkParameter id="sv3#page10#enu5#ln26#par56" name="id_id" source="sv3#page10#enu5#fld16" target="sv3#miu7.mov1#opm5#icu5#icp9"/>
+        <LinkParameter id="sv3#page10#enu5#ln26#par56" name="id_id" source="sv3#page10#enu5#fld15" target="sv3#miu7.mov1#opm5#icu5#icp9"/>
       </Link>
       <Field id="sv3#page10#enu5#fld12" name="Nombre" type="string" modifiable="true" attribute="ent1#att2" preloaded="true"/>
       <SelectionField id="sv3#page10#enu5#sfld3" name="Categoria" type="string" role="rel1#role2"/>
       <Field id="sv3#page10#enu5#fld25" name="imagen" type="blob" modifiable="true" preloaded="true" contentType="image"/>
+      <Field id="sv3#page10#enu5#fld15" name="id" type="integer" modifiable="true" preloaded="true" hidden="true" attribute="ent1#att1"/>
     </EntryUnit>
     <SelectorUnit gr:x="170" gr:y="90" id="sv3#page10#seu2" name="Categoria" entity="ent2">
       <Link id="sv3#page10#seu2#ln27" name="Flow27" to="sv3#page10#enu5" type="transport" validate="true">
@@ -24,8 +25,8 @@
       <Link id="sv3#page10#inu2#ln31" name="Modificar" to="sv3#page10#enu5" type="normal" validate="true">
         <LinkParameter id="sv3#page10#inu2#ln31#par57" name="imagen_imagen" source="data[].ent1#att7" target="sv3#page10#enu5#fld25_slot"/>
         <LinkParameter id="sv3#page10#inu2#ln31#par59" name="name_Nombre" source="data[].ent1#att2" target="sv3#page10#enu5#fld12_slot"/>
-        <LinkParameter id="sv3#page10#inu2#ln31#par75" name="id_id" source="data[].ent1#att1" target="sv3#page10#enu5#fld16_slot"/>
         <LinkParameter id="sv3#page10#inu2#ln31#par19" name="ServicioToCategor&#237;a.id_Categoria [output]" source="data[].rel1#role2_ent2#att3" target="sv3#page10#enu5#sfld3_output"/>
+        <LinkParameter id="sv3#page10#inu2#ln31#par20" name="id_id" source="data[].ent1#att1" target="sv3#page10#enu5#fld15_slot"/>
       </Link>
     </IndexUnit>
   </ContentUnits>

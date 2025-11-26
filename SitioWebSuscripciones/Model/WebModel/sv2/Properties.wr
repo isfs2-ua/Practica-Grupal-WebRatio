@@ -2,10 +2,19 @@
   <OperationUnits>
     <ModuleInstanceUnit gr:x="375" gr:y="430" id="sv2#miu2" action="true" moduleId="mov1#opm2"/>
     <CreateUnit gr:x="590" gr:y="340" id="sv2#cru2" name="Crear suscripcion" gr:showAllParts="false" entity="ent5"/>
-    <DeleteUnit gr:x="930" gr:y="60" id="sv2#dlu1" name="Borrar suscrpcion" entity="ent5">
+    <DeleteUnit gr:x="1055" gr:y="70" id="sv2#dlu1" name="Borrar suscrpcion" entity="ent5">
       <Selector id="sv2#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
     </DeleteUnit>
+    <SelectorUnit gr:x="970" gr:y="200" id="sv2#seu5" name="Plan" entity="ent3">
+      <Selector id="sv2#seu5#su6" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#seu5#su6#rcond2" name="RelacionServicio" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="sv2#seu5#oln6" name="Enviar plan" to="sv2#page7#enu3" gr:bendpoints="-194,7,186,22">
+        <LinkParameter id="sv2#seu5#oln6#par77" name="paquete_plan [label]" source="ent3#att12Array" target="sv2#page7#enu3#sfld5_label"/>
+        <LinkParameter id="sv2#seu5#oln6#par79" name="id_plan [output]" source="ent3#att5Array" target="sv2#page7#enu3#sfld5_output"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>
