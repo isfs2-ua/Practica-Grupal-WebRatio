@@ -7,7 +7,7 @@
         <KeyCondition id="sv2#dlu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
     </DeleteUnit>
-    <SelectorUnit gr:x="970" gr:y="200" id="sv2#seu5" name="Plan" entity="ent3">
+    <SelectorUnit gr:x="980" gr:y="215" id="sv2#seu5" name="Plan" entity="ent3">
       <Selector id="sv2#seu5#su6" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#seu5#su6#rcond2" name="RelacionServicio" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>

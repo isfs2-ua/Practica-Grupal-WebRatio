@@ -81,7 +81,7 @@
       <db:JoinColumn attribute="ent3#att5" name="id"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="115" gr:y="370" id="ent7" name="Pago" duration="persistent" attributeOrder="ent7#att16 ent7#att17" db:database="db2" db:table="pago">
+  <Entity gr:x="145" gr:y="545" id="ent7" name="Pago" duration="persistent" attributeOrder="ent7#att16 ent7#att17" db:database="db2" db:table="pago">
     <Attribute id="ent7#att16" key="true" name="id_pago" type="integer" db:column="id_pago"/>
     <Attribute id="ent7#att17" name="paymentDate" type="date" db:column="paymentdate"/>
   </Entity>
@@ -122,5 +122,6 @@
       <db:JoinColumn attribute="ent5#att13" name="suscrito_2_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
+  <db:Database id="db2" name="databaseGrupal" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/databaseGrupal" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
+  </db:Database>
 </DataModel>

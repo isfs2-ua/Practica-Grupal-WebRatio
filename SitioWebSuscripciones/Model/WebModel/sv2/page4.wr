@@ -16,7 +16,7 @@
         <AttributesCondition id="sv2#page4#inu3#su8#acond4" predicate="eq" booleanOperator="or" implied="false" name="AttCondition2" attributes="rel5#role9.userOID"/>
       </Selector>
     </IndexUnit>
-    <DataUnit gr:x="220" gr:y="115" id="sv2#page4#dau3" name="Gasto total" entity="User" displayAttributes="User#att20">
+    <DataUnit gr:x="255" gr:y="105" id="sv2#page4#dau3" name="Gasto total" entity="User" displayAttributes="User#att20">
       <Selector id="sv2#page4#dau3#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page4#dau3#su2#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
